@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maverick New Era | FF Circle</title>
+    <!-- Menggunakan Tailwind CSS untuk styling cepat dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Mengimport Font bergaya gaming/futuristik dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0a0a0c; /* Warna background gelap khas gaming */
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        
+        /* Efek gradasi untuk hero section */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+        }
+
+        /* Efek glow pada border saat di-hover */
+        .border-glow {
+            border: 2px solid #ff4500;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .border-glow:hover {
+            box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
+            transform: translateY(-5px);
+        }
+
+        /* Efek glow pada teks nama circle */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+        }
+
+        /* Styling kartu member/roster */
+        .bg-card {
+            background: rgba(20, 20, 25, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Hiasan miring pada header/tombol */
+        .skew-style {
+            transform: skew-x(-12deg);
+        }
+        .skew-style > * {
+            transform: skew-x(12deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="p-6 flex justify-between items-center border-b border-white/10 bg-black/50 sticky top-0 z-50">
+        <div class="text-2xl font-black font-orbitron text-orange-500 tracking-wider">MAVERICK</div>
+        <div class="space-x-8 hidden md:flex font-bold uppercase tracking-widest text-sm">
+            <a href="#home" class="hover:text-orange-500 transition">Home</a>
+            <a href="#roster" class="hover:text-orange-500 transition">Roster</a>
+            <a href="#requirements" class="hover:text-orange-500 transition">Syarat</a>
+        </div>
+        <!-- Tombol OPTEST? dengan gaya miring -->
+        <a href="https://wa.me/+6285117546867" target="_blank" class="bg-orange-600 hover:bg-orange-700 px-6 py-2 rounded-sm font-bold skew-style transition block text-center">
+            <span>OPTEST dibawah</span>
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[80vh] flex items-center justify-center text-center px-4 hero-gradient">
+        <div class="z-10 mt-16">
+            <h2 class="text-orange-500 font-bold tracking-[0.3em] uppercase mb-2 text-sm md:text-base">The Ultimate Circle</h2>
+            <h1 class="text-6xl md:text-8xl font-black font-orbitron mb-6 text-glow leading-none">MAVERICK<br><span class="text-white">NEW ERA</span></h1>
+            <p class="max-w-xl mx-auto text-gray-400 text-lg mb-10 pb-4 border-b border-orange-500/30">
+                Membangun dominasi di medan perang. Bergabunglah dengan era baru petarung elit Free Fire. Disiplin, Skill, dan Loyalitas adalah kunci kami.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#roster" class="border-glow bg-orange-600 px-10 py-3 font-bold uppercase tracking-wider w-full sm:w-auto">Lihat Tim</a>
+                <a href="#requirements" class="border-2 border-white/20 hover:border-orange-500 px-10 py-3 font-bold uppercase transition w-full sm:w-auto">Gabung</a>
+            </div>
+        </div>
+        
+        <!-- Background Decor (Gambar FF Samar) -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1587691597198-93664d5c4125?q=80&w=1600&auto=format&fit=crop" alt="ff-bg" class="w-full h-full object-cover grayscale">
+        </div>
+    </section>
+
+    <!-- Roster Section - DENGAN FOTO -->
+    <section id="roster" class="py-24 px-6 bg-[#08080a]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-16 justify-center">
+                <div class="h-1 w-16 bg-orange-600"></div>
+                <h2 class="text-5xl font-orbitron font-black uppercase tracking-tighter text-center">Elite <span class="text-orange-500">Roster</span></h2>
+                <div class="h-1 w-16 bg-orange-600"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card Player 1 (Leader) - MENGGUNAKAN FOTO ALOK -->
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER ALOK -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Manz" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <!-- Label Posisi -->
+                        <div class="absolute top-0 left-0 bg-orange-600 text-black font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>LEADER</span>
+                        </div>
+                        <!-- Efek gradasi di bawah kaki karakter -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • Manz</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">In-Game Leader (IGL)</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">THIRD Rusher</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Shotcaller</span>
+                    </div>
+                </div>
+
+                <!-- Card Player 2 - MENGGUNAKAN FOTO CHRONO -->
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • Lukang</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Primary Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+
+                <!-- Card Player 3 - MENGGUNAKAN FOTO MOCO -->
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER MOCO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Darren" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • Darren</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Support / Sniper</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Long Range</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Cover</span>
+                    </div>
+                </div>
+
+                <!-- Card Player 4 - MENGGUNAKAN FOTO JOTA -->
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER JOTA -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Viper" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>ADMIN</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • VOIDZ</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">FOUR Rusher</p>
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Flanker</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Grenadier</span>
+                    </div>
+                </div>
+
+             <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • ARIQ</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Rusher/SNIPER</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+
+              <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • VELL</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Primary Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • PAREL</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • DAPA</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • RAFF</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • FALZ</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden bg-card border border-white/10 p-5 transition-all duration-300 hover:border-orange-500 hover:-translate-y-2 rounded">
+                    <div class="relative h-80 overflow-hidden bg-zinc-900 mb-5 flex items-end justify-center rounded">
+                        <!-- LINK GAMBAR KARAKTER CHRONO -->
+                        <img src="https://files.catbox.moe/so29pr.png" 
+                             alt="MAV Lukang" 
+                             class="h-[90%] object-contain z-10 transition duration-500 group-hover:scale-110">
+                        
+                        <div class="absolute top-0 left-0 bg-zinc-700 text-white font-bold px-4 py-1.5 text-xs font-orbitron z-20 skew-style">
+                            <span>MEMBER</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-0"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold font-orbitron tracking-wide group-hover:text-orange-500 transition">MAV • GINZ</h3>
+                    <p class="text-gray-400 text-sm font-bold uppercase tracking-widest mt-1">Rusher</p>
+                    
+                    <div class="mt-5 flex gap-2 border-t border-white/5 pt-4 text-xs font-bold uppercase text-orange-300">
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Fragger</span>
+                        <span class="bg-white/5 px-2.5 py-1 rounded">Close Combat</span>
+                    </div>
+                </div>
+         </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="py-24 px-6 bg-black border-t border-white/5">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-orbitron font-black mb-16 uppercase">Syarat Gabung <span class="text-orange-500">Circle</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-card p-8 border-l-4 border-orange-500 rounded-r shadow-lg">
+                    <h3 class="font-orbitron font-bold text-xl mb-4 text-orange-500 uppercase tracking-tight">Kriteria Statistik</h3>
+                    <ul class="text-gray-400 list-disc list-inside space-y-2 text-lg">
+                        <li>Rank Minimal: diamond</li>
+                        <li>KD Ratio (Ranked): 3.5+</li>
+                        <li>Win Rate: 45%+</li>
+                        <li>Min. Level Akun: 40</li>
+                    </ul>
+                </div>
+                <div class="bg-card p-8 border-l-4 border-orange-500 rounded-r shadow-lg">
+                    <h3 class="font-orbitron font-bold text-xl mb-4 text-orange-500 uppercase tracking-tight">Komunikasi & Attitude</h3>
+                    <ul class="text-gray-400 list-disc list-inside space-y-2 text-lg">
+                        <li>Wajib memiliki Mic aktif</li>
+                        <li>Komunikasi jelas saat War</li>
+                        <li>No Toxic / No Drama</li>
+                        <li>Menghargai sesama member</li>
+                    </ul>
+                </div>
+                <div class="bg-card p-8 border-l-4 border-orange-500 rounded-r shadow-lg">
+                    <h3 class="font-orbitron font-bold text-xl mb-4 text-orange-500 uppercase tracking-tight">Komitmen Tim</h3>
+                    <ul class="text-gray-400 list-disc list-inside space-y-2 text-lg">
+                        <li>Hadir saat jadwal Scrim</li>
+                        <li>Loyal, bukan kutu loncat</li>
+                        <li>Siap Push Rank bareng</li>
+                        <li>Ganti Nickname (opsional)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-28 text-center border-t border-white/5 bg-[#08080a] px-4">
+        <h2 class="text-5xl font-orbitron font-black mb-6 tracking-tighter">SIAP JADI BAGIAN <span class="text-orange-500 text-glow">ERA BARU?</span></h2>
+        <p class="text-gray-500 mb-12 italic text-lg max-w-lg mx-auto">"Be the Maverick, Create the Era. Buktikan kemampuanmu di medan pertempuran."</p>
+        <a href="https://wa.me/+6285117546867" target="_blank" class="group relative inline-flex items-center justify-center px-16 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-orange-600 hover:bg-orange-600 rounded skew-style overflow-hidden">
+            <span class="relative uppercase tracking-widest text-2xl z-10">OPTEST?</span>
+            <div class="absolute inset-0 bg-orange-700 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 z-0"></div>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-10 text-center text-gray-600 border-t border-white/5 text-sm uppercase tracking-widest bg-black">
+        &copy; 2026 Maverick New Era. All Rights Reserved.<br>
+        <span class="text-xs mt-1 block">Created for Free Fire Community</span>
+    </footer>
+
+</body>
+</html>
